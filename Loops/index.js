@@ -45,16 +45,32 @@
 var obj = {
   name: 'Sachin',
   age: 40,
-  address: 'Mumbai'
+  state: 'Mumbai',
+
 }
+// console.log(obj)
+// console.log(obj.name)
+// console.log(obj.age)
+// console.log(obj.state)
 
+// for (var key in obj) {
+//   console.log(key, obj[key])
+// }
 
-console.log(obj)
+var arr = [1, 2, 3, 4, 5]
+// console.log(arr)
 
-var iterableObj = [1,2,3,4,5]
+// console.log(arr[0])
+// console.log(arr[1])
+// console.log(arr[2])
+// console.log(arr[3])
+// console.log(arr[4])
 
-// var iteratorObj = iterableObj[Symbol.iterator]()
+// for (var index in arr) {
+//   console.log(index, arr[index])
+// }
 
+// var iteratorObj = arr[Symbol.iterator]()
 // console.log(iteratorObj.next())
 // console.log(iteratorObj.next())
 // console.log(iteratorObj.next())
@@ -62,6 +78,8 @@ var iterableObj = [1,2,3,4,5]
 // console.log(iteratorObj.next())
 // console.log(iteratorObj.next())
 
-for (var x of iterableObj) {
-  console.log(x)
-}
+
+// for (var value of arr) {
+//   console.log(value)
+// }
+
