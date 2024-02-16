@@ -14,16 +14,15 @@
 //2) while loop
 
 
-// var num = 1
+var num = 1
 
-// while (num <= 100) {
-//   if (num === 50) {
-//     num++
-//     continue
-//   }
-//   console.log(num, name)
-//   num++
-// }
+while (num <= 100) {
+  if (num === 50) {
+    break
+  }
+  console.log(num)
+  num++
+}
 
 
 //3) do while
