@@ -151,15 +151,119 @@
 // console.log(a)
 // console.log(a)
 // let a = 10
+// var a = 10
+// function test() {
+//   console.log(a)
+//    a = 20
+  // console.log(a)
+  // var a = 30
+  // console.log(a)
+// } 
+// test()
 
-function test() {
-  console.log(a)
-  let a = 100
-  console.log(a)
-} 
-test()
+
+//Hoisting
+
+//all variables 
 
 
+// console.log(a)
+// const a = 'Hari'
+// console.log(a)
+
+// console.log(b)
+// var b = 20
+// console.log(b)
+
+// console.log(c)
+// var c = true
+// console.log(c)
+
+// console.log(d)
+// var d 
+// console.log(d)
+
+// console.log(e)
+// var e = null
+// console.log(e)
+
+// console.log(f)
+// var f = { name: 'Sachin' }
+// console.log(f)
+
+// console.log(g)
+// var g = [1,2,3]
+// console.log(g)
+
+// // console.log(h)
+// // h()     
+// let h = function test() {
+//   console.log('named fun exp')
+// }
+// console.log(h)
+// h()
+
+// console.log(i)
+// var i = function () {
+//   console.log('Ananymous fun exp')
+// }
+// console.log(i)
+
+// console.log(j)
+// var j = () => {
+//   console.log('Arrow fun exp')
+// }
+// console.log(j)
+
+// //Function declaration
+
+// console.log(dec)
+// dec()
+
+// function dec() {
+//   console.log('Fun declaration')
+// }
+
+// // console.log(dec)
+
+// dec()
+
+
+// var vs let vs const 
+
+// re-dec
+
+// var a = 10
+// console.log(a)
+// var a = 20
+// console.log(a)
+
+// let a = 10
+// console.log(a)
+// const a = 20
+// console.log(a)
+
+//re-assign
+
+// var a = 10
+// console.log(a)
+// a=20
+// console.log(a)
+
+// let a = 10
+// console.log(a)
+// a=20
+// console.log(a)
+
+// const a = 10
+// console.log(a)
+// a=20
+// console.log(a)
+
+//Initialization
+
+// const a
+// console.log(a)
 
 
 
