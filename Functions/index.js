@@ -266,6 +266,127 @@
 // console.log(a)
 
 
+// function outer() {
+//   var x = 100
+//   return function inner() {
+//   var y = 200
+//   console.log(x)
+//     return function subInner() {
+//    console.log(x)
+//    console.log(y)
+    
+//   }
+//   }
+// }
+
+// var inner = outer()
+
+// var subInner = inner()
+
+// subInner()
+
+
+//This key word
+
+
+// console.log(this)
+
+// function test() {
+//   console.log(this)
+// }
+// test()
+
+// var test = () => {
+//   console.log(this)
+// }
+// test()
+
+
+// own family 
+
+// object literal way 
+
+// var sachinfamily = {
+//   name: 'sara',
+//   age: 20,
+//   normalplay: function () {
+//     console.log(this)
+//   },
+//   arrowplay: ()=> {
+//     console.log(this)
+//   }
+// } 
+
+// console.log(sachinfamily)
+// sachinfamily.normalplay()
+// sachinfamily.arrowplay()
+
+//Factory function way 
+
+
+// function test(name, age) {
+//   return {
+//     name: name,
+//     age: age,
+
+//     normalPlay: function () {
+//       console.log(this)
+//     },
+//     arrowPlay: () => {
+//       console.log(this)
+//     }
+//   }
+// }
+
+// var sachinFamily = test('sara', 20)
+// var kohliFamily = test('aadhya', 5)
+// sachinFamily.normalPlay()
+// sachinFamily.arrowPlay()
+// kohliFamily.normalPlay()
+// kohliFamily.arrowPlay()
+
+// constructor function way 
+
+// function Test(name, age) {
+//   this.name = name;
+//   this.age = age;
+//   this.normalPlay = function () {
+//     console.log(this)
+//   };
+//   this.arrowPlay = () => {
+//     console.log(this)
+//   }
+  
+// }
+
+// var sachinFamily = new Test('sara', 20)
+// sachinFamily.normalPlay()
+// sachinFamily.arrowPlay()
+
+
+//Classical way (Es-6)
+
+class test{
+ constructor(name, age) {
+   this.name = name;
+   this.age = age;
+   this.normalPlay = function () {
+     console.log(this)
+   };
+   this.arrowPlay = () => {
+     console.log(this)
+   }
+ }
+}
+var sachinFamily = new test('sara', 20)
+sachinFamily.normalPlay()
+sachinFamily.arrowPlay()
+
+
+
+
+
+
 
 
 
