@@ -306,20 +306,20 @@
 
 // object literal way 
 
-// var sachinfamily = {
-//   name: 'sara',
-//   age: 20,
-//   normalplay: function () {
-//     console.log(this)
-//   },
-//   arrowplay: ()=> {
-//     console.log(this)
-//   }
-// } 
+var sachinfamily = {
+  name: 'sara',
+  age: 20,
+  normalplay: function () {
+    console.log(this)
+  },
+  arrowplay: ()=> {
+    console.log(this)
+  }
+} 
 
-// console.log(sachinfamily)
-// sachinfamily.normalplay()
-// sachinfamily.arrowplay()
+console.log(sachinfamily)
+sachinfamily.normalplay()
+sachinfamily.arrowplay()
 
 //Factory function way 
 
@@ -366,21 +366,21 @@
 
 //Classical way (Es-6)
 
-class test{
- constructor(name, age) {
-   this.name = name;
-   this.age = age;
-   this.normalPlay = function () {
-     console.log(this)
-   };
-   this.arrowPlay = () => {
-     console.log(this)
-   }
- }
-}
-var sachinFamily = new test('sara', 20)
-sachinFamily.normalPlay()
-sachinFamily.arrowPlay()
+// class test{
+//  constructor(name, age) {
+//    this.name = name;
+//    this.age = age;
+//    this.normalPlay = function () {
+//      console.log(this)
+//    };
+//    this.arrowPlay = () => {
+//      console.log(this)
+//    }
+//  }
+// }
+// var sachinFamily = new test('sara', 20)
+// sachinFamily.normalPlay()
+// sachinFamily.arrowPlay()
 
 
 
