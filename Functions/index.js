@@ -288,103 +288,120 @@
 
 //This key word
 
-
 // console.log(this)
 
-// function test() {
+
+// function normal() {
 //   console.log(this)
 // }
-// test()
+// normal()
 
-// var test = () => {
+// var arrow = ()=>{
 //   console.log(this)
 // }
-// test()
+// arrow()
+
+// Object literal way 
+
+// var obj = {
+//   name: 'sachin',
+//   normal: function () {
+//     console.log(this)
+//   return  function normalInner() {
+//       console.log(this)
+//     }
+//     // normalInner()
+//   },
+//   arrow: () => {
+//     console.log(this)
+//     var arrowInner = () => {
+//       console.log(this)
+//     }
+//     return arrowInner
+//     // arrowInner()
+//   }
+// }
+
+// var normalInner = obj.normal()
+// normalInner()
+// var arrowInner = obj.arrow()
+// arrowInner()
 
 
-// own family 
+//Factory function way
 
-// object literal way 
-
-var sachinfamily = {
-  name: 'sara',
-  age: 20,
-  normalplay: function () {
-    console.log(this)
-  },
-  arrowplay: ()=> {
-    console.log(this)
-  }
-} 
-
-console.log(sachinfamily)
-sachinfamily.normalplay()
-sachinfamily.arrowplay()
-
-//Factory function way 
-
-
-// function test(name, age) {
+// function factory() {
 //   return {
-//     name: name,
-//     age: age,
-
-//     normalPlay: function () {
+//     name: 'sachin',
+//     normal: function () {
 //       console.log(this)
+//       function normalInner() {
+//         console.log(this)
+//       }
+//       normalInner()
 //     },
-//     arrowPlay: () => {
+//     arrow: () => {
 //       console.log(this)
+//       var arrowInner = () => {
+//         console.log(this)
+//       }
+//       arrowInner()
 //     }
 //   }
 // }
 
-// var sachinFamily = test('sara', 20)
-// var kohliFamily = test('aadhya', 5)
-// sachinFamily.normalPlay()
-// sachinFamily.arrowPlay()
-// kohliFamily.normalPlay()
-// kohliFamily.arrowPlay()
+// var obj = factory()
 
-// constructor function way 
+// obj.normal()
+// obj.arrow()
 
-// function Test(name, age) {
-//   this.name = name;
-//   this.age = age;
-//   this.normalPlay = function () {
+
+//constructor function way
+
+function Construct() {
+  console.log(this)
+  this.name = 'sachin';
+  this.normal = function () {
+    console.log(this)
+    function normalInner() {
+      console.log(this)
+    }
+    normalInner()
+  };
+  this.arrow = () => {
+    console.log(this)
+    var arrowInner = () => {
+      console.log(this)
+    }
+    arrowInner()
+  }
+}
+
+var obj = new Construct()
+
+obj.normal()
+obj.arrow()
+
+//Classical way
+
+// class myClass{
+//   constructor() {
 //     console.log(this)
-//   };
-//   this.arrowPlay = () => {
-//     console.log(this)
-//   }
-  
+//     this.name = 'sachin';
+//     this.normal = function () {
+//       console.log(this)
+//     };
+//     this.arrow = () => {
+//       console.log(this)
+//     }
+// }
 // }
 
-// var sachinFamily = new Test('sara', 20)
-// sachinFamily.normalPlay()
-// sachinFamily.arrowPlay()
+// // console.log(typeof myClass)
+// var obj = new myClass()
 
-
-//Classical way (Es-6)
-
-// class test{
-//  constructor(name, age) {
-//    this.name = name;
-//    this.age = age;
-//    this.normalPlay = function () {
-//      console.log(this)
-//    };
-//    this.arrowPlay = () => {
-//      console.log(this)
-//    }
-//  }
-// }
-// var sachinFamily = new test('sara', 20)
-// sachinFamily.normalPlay()
-// sachinFamily.arrowPlay()
-
-
-
-
+// obj.normal()
+// obj.arrow()
 
 
 
