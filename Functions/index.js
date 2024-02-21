@@ -307,7 +307,7 @@
 //   name: 'sachin',
 //   normal: function () {
 //     console.log(this)
-//   return  function normalInner() {
+//   return  normalInner = ()=> {
 //       console.log(this)
 //     }
 //     // normalInner()
@@ -324,6 +324,9 @@
 
 // var normalInner = obj.normal()
 // normalInner()
+// normalInner.call(obj)
+// normalInner.apply(obj)
+// normalInner.bind(obj)()
 // var arrowInner = obj.arrow()
 // arrowInner()
 
@@ -358,50 +361,77 @@
 
 //constructor function way
 
-function Construct() {
-  console.log(this)
-  this.name = 'sachin';
-  this.normal = function () {
+// function Construct() {
+//   console.log(this)
+//   this.name = 'sachin';
+//   this.normal = function () {
+//     console.log(this)
+//     function normalInner() {
+//       console.log(this)
+//     }
+//     normalInner()
+//   };
+//   this.arrow = () => {
+//     console.log(this)
+//     var arrowInner = () => {
+//       console.log(this)
+//     }
+//     arrowInner()
+//   }
+// }
+
+// var obj = new Construct()
+
+// obj.normal()
+// obj.arrow()
+
+//Classical way
+
+class myClass{
+  constructor() {
     console.log(this)
-    function normalInner() {
+    this.name = 'sachin';
+    this.normal = function () {
       console.log(this)
-    }
-    normalInner()
-  };
-  this.arrow = () => {
-    console.log(this)
-    var arrowInner = () => {
+    var normalInner = ()=> {
+        console.log(this)
+      }
+      normalInner()
+    };
+    this.arrow = () => {
       console.log(this)
+      var arrowInner = () => {
+        console.log(this)
+      }
+      arrowInner()
     }
-    arrowInner()
-  }
+}
 }
 
-var obj = new Construct()
+// console.log(typeof myClass)
+var obj = new myClass()
 
 obj.normal()
 obj.arrow()
 
-//Classical way
 
-// class myClass{
-//   constructor() {
-//     console.log(this)
-//     this.name = 'sachin';
-//     this.normal = function () {
-//       console.log(this)
-//     };
-//     this.arrow = () => {
-//       console.log(this)
-//     }
-// }
+//Changing of this reference
+
+// function play(a,b,c) {
+//   console.log(this)
+//   console.log(a,b,c)
 // }
 
-// // console.log(typeof myClass)
-// var obj = new myClass()
+// var person = {
+//   name: 'sachin'
+// }
 
-// obj.normal()
-// obj.arrow()
+// play(1, 2, 3)
+// play.call(person, 1,2,3)
+// play.apply(person, [1, 2, 3])
+// play.bind(person)(1,2,3)
+
+
 
 
 
