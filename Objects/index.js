@@ -162,20 +162,76 @@
 
 //Reference (Object)
 
-var obj1 = {
-  name: 'Sachin',
-  address: { road: 101 },
-  play: function () {
-    console.log('Play')
-  }
-}
+// var lodash = require('lodash')
+
+
+
+// var obj1 = {
+//   name: 'Sachin',
+//   address: { road: 101 },
+//   play: function () {
+//     console.log('Play')
+//   }
+// }
 
 // var obj2 = obj1 //normal copy
+
 // var obj2 = Object.assign({}, obj1) //shallow copy
-var obj2 = {...obj1} //shallow copy
+// var obj2 = {...obj1} //shallow copy
 
-obj2.name = 'kohli'
-obj2.address.road = 201
+// var obj2 = JSON.parse(JSON.stringify(obj1)) //deep copy
+// var obj2 = lodash.cloneDeep(obj1) //deep copy
 
-console.log(obj1)
-console.log(obj2)
+// var obj2 = Object.assign({}, obj1) //shallow copy es-5
+// var obj2 = {...obj1} //shallow copy es-6 spread operator
+// console.log(obj1===obj2)
+
+// obj2.name = 'kohli'
+// obj2.address.road = 201
+// console.log(obj1)
+// console.log(obj2)
+
+// console.log(obj1.name === obj2.name)
+// console.log(obj1.address === obj2.address)
+// obj2.name = 'kohli'
+// obj2.address.road = 201
+
+
+// console.log(obj1)
+// console.log(obj2)
+// console.log(obj1 === obj2)
+
+
+//Math object
+// var x = 2
+// var y = 8
+// var z = 9.5
+// console.log(Math.min(x,y))
+// console.log(Math.max(x,y))
+// console.log(Math.ceil(z))
+// console.log(Math.floor(z))
+// console.log(Math.round(z))
+// console.log(Math.random())
+// console.log(Math.random()*10)
+// console.log(Math.random()*100)
+// console.log(Math.pow(x, y))
+// console.log(Math.sqrt(25))
+
+
+//Date object
+
+var now = new Date()
+var date1 = new Date(2002, 11, 30, 9)
+var date2 = new Date('2020 10 10 2:30:10')
+console.log(date2)
+// console.log(now)
+// console.log(now.getFullYear())
+// console.log(now.getDate())
+// console.log(now.getDay())
+// console.log(now.getMonth())
+// console.log(now.getHours())
+// console.log(now.getHours())
+// now.setFullYear(2050)
+// console.log(now)
+
+
