@@ -220,10 +220,10 @@
 
 //Date object
 
-var now = new Date()
-var date1 = new Date(2002, 11, 30, 9)
-var date2 = new Date('2020 10 10 2:30:10')
-console.log(date2)
+// var now = new Date()
+// var date1 = new Date(2002, 11, 30, 9)
+// var date2 = new Date('2020 10 10 2:30:10')
+// console.log(date2)
 // console.log(now)
 // console.log(now.getFullYear())
 // console.log(now.getDate())
@@ -233,5 +233,105 @@ console.log(date2)
 // console.log(now.getHours())
 // now.setFullYear(2050)
 // console.log(now)
+
+//Template string (ES-6)
+
+// var name = 'sachin'
+   
+// var age = 40
+
+// console.log('Hi this is' + ' ' + name + ' ' + 'my age is' + ' ' + age)
+// console.log(`Hi This is ${name} My age is ${age}`)
+
+
+//String object
+
+var msg = 'Hi how are you'
+console.log(msg)
+
+//length
+
+// console.log(msg.length)
+
+//How to remove empty space
+
+// console.log(msg.trim().length)
+// console.log(msg.trimStart().length)
+// console.log(msg.trimEnd().length)
+
+//How to eaxtract or copy specific/part of string
+
+//slice
+
+// var x = msg.slice()
+// var x = msg.slice(0)
+// var x = msg.slice(2, 6)
+// var x = msg.slice(-14)
+
+//subString
+
+// var x = msg.substring(-3)
+
+//subStr
+
+// var x = msg.substr(0, 14)
+
+//How to extract a string character
+
+// var x = msg.charAt(1)
+// var x = msg.charCodeAt(1)
+
+//How to replace a string content
+
+// console.log(msg.replace('you', 'me'))
+// console.log(x)
+
+//How to convert string
+
+// var x = msg.toUpperCase()
+// var y = msg.toLowerCase()
+// console.log(x)
+// console.log(y)
+
+//How to add new content to end of string
+
+// console.log(msg.concat(' sachin'))
+
+//How to add content at staring and ending of string
+
+// var myMsg = 'sachin'
+
+// console.log(myMsg.padStart(10, 5))
+// console.log(myMsg.padEnd(10, 10))
+// console.log(myMsg.padStart(10, 'kohli'))
+
+//How to split string content
+
+// var x = msg.split('')
+// console.log(x)
+
+//How to find specific string
+// var msg = 'Hi how are you Hi'
+
+
+// console.log(msg.indexOf('Hi'))
+// console.log(msg.indexOf('z'))
+// console.log(msg.lastIndexOf('Hi'))
+// console.log(msg.lastIndexOf('z'))
+// console.log(msg.includes('Hi'))
+// console.log(msg.includes('z'))
+// console.log(msg.startsWith('Hi'))
+// console.log(msg.endsWith('Hi'))
+
+
+
+
+
+
+
+
+
+
+
 
 
