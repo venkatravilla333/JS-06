@@ -143,28 +143,203 @@
 
 //How to iterate array
 
-var arr = [1,2,3,4,5]
+// var arr = [1,2,3,4,5]
 
 //for of loop
 
- for (var value of arr) {
-  console.log(value)
-}
+//  for (var value of arr) {
+//   console.log(value)
+// }
 
 //forEach method
 
-var valueFromForeach = arr.forEach((v, i) => {
-  console.log(v, i)
-  // return 100
+// var valueFromForeach = arr.forEach((v, i) => {
+//   console.log(v, i)
+//   // return 100
+// })
+
+// console.log(valueFromForeach)
+
+// var valueFrommap = arr.map((v) => {
+//   return v
+// })
+
+// console.log(valueFrommap)
+
+
+//Join method
+
+// var arr = [1, 2, 3, 4, 5]
+
+// console.log(arr, typeof arr)
+
+// var x = arr.join()
+// console.log(x, typeof x)
+
+// var y = x.split(' ')
+
+// console.log(y, typeof y)
+
+
+// Testing of array items
+
+// var arr = [1, 2, 3, 4, 5, -2]
+
+// var someresult = arr.some((item) => {
+//  return item > 0
+// })
+
+// console.log(someresult)
+
+// var everyresult = arr.every((item) => {
+//  return item > 0
+// })
+
+// console.log(everyresult)
+
+//filter method
+
+// var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// console.log(arr)
+
+// var filterResult = arr.filter((item) => {
+//   return item > 5
+// })
+
+// console.log(filterResult)
+
+//map method
+
+// var arr = [1, 2, 3, 4, 5]
+
+// console.log(arr)
+// var mapResult = arr.map((item) => {
+//   return item*100
+// })
+
+// console.log(mapResult)
+
+
+// var foreachResult = arr.forEach((item, index) => {
+//   return item
+// })
+
+// console.log(foreachResult)
+
+
+//reduce method
+
+// var arr = [1, 2, 3, 4, 5]
+
+// var reduceResult = arr.reduce((cum, cur) => {
+//   // console.log(cum, cur)
+//   return cum+cur
+// }, 0)
+
+// console.log(reduceResult)
+
+
+//Flattening of array
+
+// var arr = [1, 2, [3, 4, [5, 6, [7,8,9,10]]]]
+
+// console.log(arr)
+
+// var fallattenArr = arr.flat(Infinity)
+
+// console.log(fallattenArr)
+
+// var fallattenArr = []
+
+// function flatteningArray(arr) {
+//   for (var value of arr) {
+//     console.log(value)
+//     if(Array.isArray(value)){
+//       flatteningArray(value)
+//     } else {
+//       fallattenArr.push(value)
+//     }
+//   }
+// }
+
+// flatteningArray(arr)
+
+
+// console.log(fallattenArr)
+
+
+//How to remove duplicates in array
+
+// var arr = [1, 2, 3, 4, 3, 5, 6, 5, 7, 5]
+
+// var uniqueValues = [...new Set(arr)]
+
+// var uniqueArr = []
+
+// function findingUniqueValues(arr) {
+//   for (var value of arr) {
+//     console.log(value)
+//     if (uniqueArr.indexOf(value) === -1) {
+//         uniqueArr.push(value)
+//   }
+//   }
+// }
+
+// findingUniqueValues(arr)
+// console.log(uniqueArr)
+
+
+//Array.from()
+
+
+// function test() {
+//   console.log(arguments)
+//   console.log(Array.isArray(arguments))
+//   var x = Array.from(arguments)
+//   console.log(x, typeof x)
+//   console.log(Array.isArray(x))
+// }
+
+// test(1,2,3,4,5)
+
+//Sorting
+
+//primitives => single value
+
+// var arr = [7, 2, 6, 4, 9]
+
+//primitives => double values
+
+var arr = [70, 12, 6, 4, 19]
+
+
+//ascending
+
+// var assortResult = arr.sort()
+// console.log(assortResult)
+//descending
+// var dssortResult = arr.reverse()
+
+// console.log(dssortResult)
+
+//double value
+
+// var asresult = arr.sort((a,b) => {
+//   return a-b
+// })
+var dsresult = arr.sort((a,b) => {
+  return b-a
 })
 
-console.log(valueFromForeach)
+// console.log(asresult)
+console.log(dsresult)
 
-var valueFrommap = arr.map((v) => {
-  return v
-})
 
-console.log(valueFrommap)
+
+
+
+
+
 
 
 
