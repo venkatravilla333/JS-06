@@ -310,7 +310,7 @@
 
 //primitives => double values
 
-var arr = [70, 12, 6, 4, 19]
+// var arr = [70, 12, 6, 4, 19]
 
 
 //ascending
@@ -327,16 +327,32 @@ var arr = [70, 12, 6, 4, 19]
 // var asresult = arr.sort((a,b) => {
 //   return a-b
 // })
-var dsresult = arr.sort((a,b) => {
-  return b-a
-})
+
+// var dsresult = arr.sort((a,b) => {
+//   return b-a
+// })
 
 // console.log(asresult)
-console.log(dsresult)
+// console.log(dsresult)
 
 
 
+var arr = [{ course: 'nodejs' }, { course: 'html' }, { course: 'react' }]
 
+// var arr = [10, 5, 20, 2]
+
+
+
+// for (var i = 0; i < arr.length; i++){
+//   for (var j = i + 1; j < arr.length; j++){
+//     if (arr[i].course < arr[j].course) {
+//       var temp = arr[i]
+//       arr[i] = arr[j]
+//       arr[j] = temp
+//     }
+//   }
+// }
+// console.log(arr)
 
 
 
