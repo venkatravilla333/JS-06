@@ -51,3 +51,7 @@
 // element.style.background = 'green'
 // element.style.color = 'red'
 // element.textContent = 'updated dom-1'
+
+
+// Traversing of DOM
+
