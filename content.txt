@@ -1238,5 +1238,7 @@ A new instance of Array is returned by the Array.from() method, and it contains 
 
    3) Debouncing event: Debouncing will excute after every certain time provided in between there was no event firing.
 
+   
+
 
 
