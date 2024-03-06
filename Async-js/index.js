@@ -113,96 +113,123 @@
 // GET Request
 
 
-var getdataBtn = document.getElementById('getdata')
-var getsingleitem = document.getElementById('getsingleitem')
-var senddataBtn = document.getElementById('senddata')
-var deletedataBtn = document.getElementById('deletedata')
-var updatedataBtn = document.getElementById('updatedata')
+// var getdataBtn = document.getElementById('getdata')
+// var getsingleitem = document.getElementById('getsingleitem')
+// var senddataBtn = document.getElementById('senddata')
+// var deletedataBtn = document.getElementById('deletedata')
+// var updatedataBtn = document.getElementById('updatedata')
 
-getdataBtn.addEventListener('click', fetchData)
-getsingleitem.addEventListener('click', fetchSingleItem)
-senddataBtn.addEventListener('click', sendData)
-deletedataBtn.addEventListener('click', deleteData)
-updatedataBtn.addEventListener('click', updateData)
+// getdataBtn.addEventListener('click', fetchData)
+// getsingleitem.addEventListener('click', fetchSingleItem)
+// senddataBtn.addEventListener('click', sendData)
+// deletedataBtn.addEventListener('click', deleteData)
+// updatedataBtn.addEventListener('click', updateData)
 
-function fetchData() {
-  fetch('https://jsonplaceholder.typicode.com/posts')
-    .then((res) => {
-      console.log(res)
-    return res.json()
-    }).then((data) => {
-    console.log(data)
-    }).catch((error) => {
-    console.log(error)
-  })
-}
-function fetchSingleItem() {
-  console.log('hello')
-  fetch('https://jsonplaceholder.typicode.com/posts/10')
-    .then((res) => {
-      console.log(res)
-    return res.json()
-    }).then((data) => {
-    console.log(data)
-    }).catch((error) => {
-    console.log(error)
-  })
-}
+// function fetchData() {
+//   fetch('https://jsonplaceholder.typicode.com/posts')
+//     .then((res) => {
+//       console.log(res)
+//     return res.json()
+//     }).then((data) => {
+//     console.log(data)
+//     }).catch((error) => {
+//     console.log(error)
+//   })
+// }
+// function fetchSingleItem() {
+//   fetch('https://jsonplaceholder.typicode.com/posts/10')
+//     .then((res) => {
+//       console.log(res)
+//     return res.json()
+//     }).then((data) => {
+//     console.log(data)
+//     }).catch((error) => {
+//     console.log(error)
+//   })
+// }
 
-var data = {
-  userId: 200,
-  title: 'My title',
-  body: 'My body'
-};
+// var data = {
+//   userId: 200,
+//   title: 'My title',
+//   body: 'My body'
+// };
 
-function sendData() {
-  fetch('https://jsonplaceholder.typicode.com/posts',  {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  })
-    .then((res) => {
-     console.log(res)
-    }).catch((error) => {
-    console.log(error)
-  })
-}
+// function sendData() {
+//   fetch('https://jsonplaceholder.typicode.com/posts',  {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify(data)
+//   })
+//     .then((res) => {
+//      console.log(res)
+//     }).catch((error) => {
+//     console.log(error)
+//   })
+// }
 
-function deleteData() {
-  fetch('https://jsonplaceholder.typicode.com/posts/20', {
-    method: 'DELETE',
-    // headers: {
-    //   'Content-Type': 'application/json',
-    // },
-    // body: JSON.stringify(data),
-  })
-    .then((res) => {
-      console.log(res);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-}
-
-
-function updateData() {
-  fetch('https://jsonplaceholder.typicode.com/posts/20', {
-    method: 'PUT',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  })
-    .then((res) => {
-      console.log(res);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-}
+// function deleteData() {
+//   fetch('https://jsonplaceholder.typicode.com/posts/20', {
+//     method: 'DELETE',
+//     // headers: {
+//     //   'Content-Type': 'application/json',
+//     // },
+//     // body: JSON.stringify(data),
+//   })
+//     .then((res) => {
+//       console.log(res);
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// }
 
 
+// function updateData() {
+//   fetch('https://jsonplaceholder.typicode.com/posts/20', {
+//     method: 'PUT',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(data),
+//   })
+//     .then((res) => {
+//       console.log(res);
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// }
 
+
+
+//Promise.race() vs Promise.all() vs Promise.allSettled()
+
+// var pr1 = new Promise((res, rej) => {
+//   setTimeout(() => {
+//     res('pr1');
+//   }, 4000);
+// } )
+// var pr2 = new Promise((res, rej) => {
+//   setTimeout(() => {
+//     rej('pr2')
+//   }, 6000)
+// })
+// var pr3 = new Promise((res, rej) => {
+//   setTimeout(() => {
+//     res('pr3')
+//   }, 5000)
+// })
+
+
+// Promise.race([pr1, pr2, pr3]).then((res) => {
+//   console.log(res)
+// })
+// Promise.all([pr1, pr2, pr3]).then((res) => {
+//   console.log(res)
+// })
+// Promise.allSettled([pr1, pr2, pr3]).then((res) => {
+//   console.log(res)
+// })
 
