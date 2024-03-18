@@ -52,31 +52,52 @@
 // console.log(iteratorObj.next())
 
 
-// var obj = {
-//   name: 'sachin',
-//   age: 40,
-//   color: 'red'
-// }
-// console.log(obj)
+var obj = {
+  name: 'sachin',
+  age: 40,
+  color: 'red'
+}
+console.log(obj)
 
-// obj[Symbol.iterator] = function () {
+obj[Symbol.iterator] = function () {
+  // var count = 0
+  // var arr = Object.keys(obj)
+
+  // var next = () => {
+  //   if (count < arr.length) {
+  //     return {value: obj[arr[count++]], done: false}
+  //   } else {
+  //     return {value: undefined, done: true}
+  //   }
+  // }
+  // return {next}
+}
+
+// function createIteratorobj(arr) {
 //   var count = 0
-//   var arr = Object.keys(obj)
-
+  
 //   var next = () => {
 //     if (count < arr.length) {
-//       return {value: obj[arr[count++]], done: false}
+//       return {value: obj[arr[count++]] , done: false }
 //     } else {
 //       return {value: undefined, done: true}
 //     }
 //   }
 //   return {next}
+  
 // }
-
+// let arr = Object.keys(obj)
+// var iteratorObj = createIteratorobj(arr)
+// console.log(iteratorObj.next())
+// console.log(iteratorObj.next())
+// console.log(iteratorObj.next())
+// console.log(iteratorObj.next())
 
 // for (var value of obj) {
 //   console.log(value)
 // }
+
+
 // console.log(obj)
 
 
