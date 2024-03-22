@@ -33,12 +33,15 @@ var mywindow
 function openWindow() {
  mywindow = window.open('', 'hello', 'width=200,height=100');
 }
+
 function closeWindow() {
   mywindow.close();
 }
+
 function moveWindow() {
  return mywindow.moveTo(600, 500);
 }
+
 function resizeWindow() {
  return mywindow.resizeTo(600,100);
 }
