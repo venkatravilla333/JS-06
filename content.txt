@@ -2420,7 +2420,7 @@ go()	        Loads a specific URL (page) from the history list
 
                 (Will only work if the previous pages exist in your history list)
 
-length	     Returns the number of URLs (pages) in the history list
+length Returns the number of URLs (pages) in the history list
 
 
 history.go(0) reloads the page.
@@ -2428,4 +2428,88 @@ history.go(0) reloads the page.
 history.go(-1) is the same as history.back().
 
 history.go(1) is the same as history.forward().
+
+
+
+
+25) Javascript output methods
+    =========================
+
+   JavaScript Output defines the ways to display the output of a given code. The output can be displayed by using different ways which are listed below:
+
+  
+   1) document.write(): It is used only for testing purpose.
+      Write some text directly to the HTML output.
+      Write some HTML elements directly to the HTML output.
+      The write() method deletes all existing HTML when loaded document.
+      This should be avoided.
+
+   2) console.log(): It is used for debugging purposes.
+
+      The log() method writes (logs) a message to the console.  
+      The log() method is useful for testing purposes.
+
+   4) window.alert(): It displays the content using an alert box.
+    
+      The alert() method displays an alert box with a message and an OK button 
+
+   5) window.prompt(): It Allows to take input from user.
+      
+      The prompt() method displays a dialog box that prompts the user for input.
+      The prompt() method returns the input value if user clicks "OK" otherwise it returns null. A prompt box is used if you want the user to input a value. When a prompt box pops up, the user will have to click either "OK" or "Cancel" to proceed.
+
+   6) window.confirm():
+ 
+      The confirm() method displays a dialog box with a message OK button, and Cancel button.
+      The confirm() method returns true if the user clicked "OK", otherwise false.
+
+
+innerText vs innerHTML vs textContent
+--------------------------------------
+
+In HTML, innerHTML, innerText, and textContent are properties of the DOM (Document Object Model). They allow you to read and update the content of HTML elements.
+
+InnerText:
+--------- 
+This approximates the “rendered” text content of a node and is aware of styling and CSS. It’s most effective when you only need to see what’s in the element without the formatting.
+
+TextContent:
+----------- 
+This retrieves and sets the content of the tag as plain text. It’s most effective when you want to see what’s in an element, plus styling.
+
+InnerHTML:
+--------- 
+It is used to display content of an element. It write the HTML content.
+Using innerHTML allows you to see exactly what’s in the HTML markup contained within a string, including elements like spacing, line breaks and formatting.
+
+  
+Example:
+
+InnerHTML vs innerText vs TextContent
+-------------------------------------
+
+<div id='one'>
+   
+This element is <strong>strong</strong> and has   some super fun <code>code</code>!
+
+</div>
+
+const getValue = document.getElementById('one');
+
+Here’s what innerHTML, innerText and textContent return:
+
+getValue.innerHTML
+
+This element is <strong>strong</strong> and has    some super fun <code>code</code>!
+
+
+getValue.innerText
+
+This element is strong and has some super fun code!
+
+
+getValue.textContent
+
+This element is strong and     has some super fun code!
+
 
