@@ -2513,3 +2513,40 @@ getValue.textContent
 This element is strong and     has some super fun code!
 
 
+
+
+
+26. Some methods
+----------------
+
+parseInt:
+--------
+parseInt() method parses a string and returns the integer only not decimals.
+
+parseFloat:
+-----------
+The parseFloat() method parses a string and returns the number with decimal also.
+
+toString:
+--------
+The toString() converts number into string with all decimals.
+
+Every JavaScript object has a toString() method.
+
+toFixed:
+-------
+The toFixed() method converts a number to a string.
+
+The toFixed() method rounds the string to a specified number of decimals.
+
+
+JSON.stringfy():
+----------------
+
+It will convert the js obj into json obj.
+
+JSON.parse():
+------------
+
+It will convert the json obj into js obj.
+
